@@ -1,0 +1,10 @@
+
+fluxctl install --git-user="jasskopov22" --git-email=jass.kopov@gmail.com --git-url= git@github.com:jasskopov22/devops_gitops.git --git-path=namespaces,workloads --namespace=flux | kubectl apply -f -
+export GHUSER="jasskopov22"
+
+fluxctl install \
+--git-user=${GHUSER} \
+--git-email=${GHUSER}@users.noreply.github.com \
+--git-url=git@github.com:${GHUSER}/devops_gitops\
+--git-path=namespaces,workloads \
+--namespace=flux | kubectl apply -f -
