@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-deployment
+  name: nginx-deployment
   labels:
     app: nginx
 spec:
-  replicas: 22
+  replicas: 18
   selector:
     matchLabels:
       app: nginx
