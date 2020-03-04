@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  annotations:
+    fluxcd.io/automated: "true"
+  
   labels:
     app: nginx
 spec:
@@ -16,6 +19,6 @@ spec:
     spec:
       containers:
       - name: gitops-nginx
-        image: abdessatar/gitops-nginx:1.0
+        image: abdessatar/gitops-nginx:1.1
         ports:
         - containerPort: 80
