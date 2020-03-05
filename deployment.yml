@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: gitops-nginx
-        image: abdessatar/gitops-nginx:1.8
+        image: abdessatar/gitops-nginx:latest
         ports:
         - containerPort: 80
