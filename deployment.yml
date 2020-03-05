@@ -8,7 +8,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 5
+  replicas: 6
   selector:
     matchLabels:
       app: nginx
@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: gitops-nginx
-        image: abdessatar/gitops-nginx:latest
+        image: abdessatar/gitops-nginx:2.2
         ports:
         - containerPort: 80
